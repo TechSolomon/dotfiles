@@ -11,10 +11,10 @@ export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="robbyrussell"
 
 # Uncomment the following line if pasting URLs and other text is messed up.
-DISABLE_MAGIC_FUNCTIONS="true"
+# DISABLE_MAGIC_FUNCTIONS="true"
 
 # Uncomment the following line to enable command auto-correction.
-ENABLE_CORRECTION="true"
+# ENABLE_CORRECTION="true"
 
 plugins=(
     git
@@ -25,7 +25,11 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-alias config='/usr/bin/git --git-dir=/home/$USER/.cfg/ --work-tree=/home/$USER'
+alias c="clear"
+alias {config,cfg}="/usr/bin/git --git-dir=/home/$USER/.cfg/ --work-tree=/home/$USER"
+alias gs="git status"
+alias {reload,rl}="source ~/.zshrc"
+alias top="htop"
 
 export GPG_TTY=$(tty)
 
