@@ -16,8 +16,6 @@ DISABLE_MAGIC_FUNCTIONS="true"
 # Uncomment the following line to enable command auto-correction.
 ENABLE_CORRECTION="true"
 
-# Standard plugins: $ZSH/plugins/
-# Custom plugins: $ZSH_CUSTOM/plugins/
 plugins=(
     git
     zsh-autosuggestions
@@ -37,4 +35,4 @@ eval "$(chef shell-init zsh)"
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /usr/bin/terraform terraform
 
-source /home/solomon/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source ./zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
