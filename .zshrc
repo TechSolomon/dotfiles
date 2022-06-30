@@ -25,7 +25,7 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-alias config='/usr/bin/git --git-dir=/home/solomon/.cfg/ --work-tree=/home/solomon'
+alias config='/usr/bin/git --git-dir=/home/$USER/.cfg/ --work-tree=/home/$USER'
 
 export GPG_TTY=$(tty)
 
