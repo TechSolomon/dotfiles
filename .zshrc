@@ -35,4 +35,4 @@ eval "$(chef shell-init zsh)"
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /usr/bin/terraform terraform
 
-source ./zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /home/$USER/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
