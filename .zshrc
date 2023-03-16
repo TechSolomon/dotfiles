@@ -19,6 +19,7 @@ ZSH_THEME="robbyrussell"
 plugins=(
     git
     zsh-autosuggestions
+    zsh-syntax-highlighting
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -32,11 +33,11 @@ alias {reload,rl}="source ~/.zshrc"
 alias top="htop"
 
 export GPG_TTY=$(tty)
+export PATH="$HOME/.rbenv/bin:$PATH"
 
+eval "$(rbenv init -)"
 eval "$(starship init zsh)"
 eval "$(chef shell-init zsh)"
 
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /usr/bin/terraform terraform
-
-source /home/$USER/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
